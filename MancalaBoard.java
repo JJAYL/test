@@ -31,14 +31,14 @@ public class MancalaBoard
     
     public void printBoard()
     {
-    	System.out.print("  ");
+    	System.out.print("B:");
     	for(int i = 12; i > 6; i--)
     	{
     		System.out.print(Integer.toString(mancalaBoard[i].getStones())+ " ");
     	}
     	System.out.println();
     	System.out.println(mancalaBoard[PLAYER_B_MANCALA].getStones() + " a b c d e f " + mancalaBoard[PLAYER_A_MANCALA].getStones());
-    	System.out.print("  ");
+    	System.out.print("A:");
     	for(int i = 0; i < 6; i++)
     	{
     		System.out.print(mancalaBoard[i].getStones() + " ");
@@ -109,14 +109,14 @@ public class MancalaBoard
        {
     	   if((player)&&(mancalaPitIndex!=PLAYER_A_MANCALA)) //if it is player A and is not his mancala
     	   {						//if(mancalaPitIndex!=PLAYER_A_MANCALA) {		  
-    		   mancalaBoard[PLAYER_A_MANCALA].addStoness(mancalaBoard[mancalaPitIndex+6].getStones());//take the opposite +7 to get accross the board if player A. use -7 if player B
+    		   mancalaBoard[PLAYER_A_MANCALA].addStones(mancalaBoard[mancalaPitIndex+6].getStones());//take the opposite +7 to get accross the board if player A. use -7 if player B
     		   mancalaBoard[mancalaPitIndex+6].clearPit();
     		   //mancalaBoard[PLAYER_A_MANCALA].addStones();  //for some reason overriding this method doesnt work
     	   }
     	  // else
     		if((!player)&&(mancalaPitIndex!=PLAYER_A_MANCALA))   
     	   {								  //if(mancalaPitIndex!=PLAYER_B_MANCALA) { 
-    		   mancalaBoard[PLAYER_A_MANCALA].addStoness(mancalaBoard[mancalaPitIndex-6].getStones());//take the opposite +7 to get accross the board if player A. use -7 if player B
+    		   mancalaBoard[PLAYER_A_MANCALA].addStones(mancalaBoard[mancalaPitIndex-6].getStones());//take the opposite +7 to get accross the board if player A. use -7 if player B
     		   mancalaBoard[mancalaPitIndex-6].clearPit();
     	   }
        }
