@@ -22,13 +22,13 @@ public class Pit
     {
         return stones;
     }     
-    public void addStones()
+    public void addStone()
     {
         previousStones = stones;
         stones++;
     }
     
-    public void addStoness(int stoness) //CHANGE THIS SHITTY NAME
+    public void addStones(int stoness) //CHANGE THIS SHITTY NAME
     {
         previousStones = stones;
         this.stones+=stoness;
